@@ -1,0 +1,13 @@
+@use "sass:math";
+
+$html-font-size: 16px;
+
+@function rem($pxValue) {
+  @return math.div($pxValue, $html-font-size) * 1rem;
+}
+
+$container-padding: calc(rem(24px) * 2);
+
+@function calculate-container-size($width) {
+  @return calc(#{$width} + #{$container-padding});
+}
