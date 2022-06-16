@@ -32,6 +32,11 @@ section,
 summary {
   display: block;
 }
+main,
+footer {
+  margin: 0;
+  padding: 0;
+}
 audio,
 canvas,
 progress,
