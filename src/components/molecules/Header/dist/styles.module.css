@@ -1,0 +1,13 @@
+.headContents {
+  height: 50px;
+  background: #E6E9EE !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+}
+.headContents .logos {
+  display: flex;
+  flex-basis: 50px;
+  justify-content: space-between;
+}

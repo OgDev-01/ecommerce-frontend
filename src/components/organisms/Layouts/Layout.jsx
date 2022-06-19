@@ -1,9 +1,10 @@
 import React from "react";
+import { Header } from "../../molecules/Header/Header";
 
 const Layout = ({ children }) => {
   return (
     <div className='main-wrapper'>
-      <header>Page header</header>
+      <header><Header /></header>
       {/* pages content */}
       <main>{children}</main>
       <footer>Page Footer</footer>
