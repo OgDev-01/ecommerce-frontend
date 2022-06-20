@@ -8,20 +8,20 @@ export const Header = () => {
       <div className='container'>
         <div className={styles.headContents}>
           <div>
-            <img src='images/icons/Menu.png' alt='' />
+            <img src='images/icons/Menu.png' alt='hamburger' />
           </div>
           <div className={styles.logo}>
             <Links path='/'>
-              <img src='images/vectors/Logo.png' alt='' />
+              <img src='images/vectors/Logo.png' alt='logo' />
             </Links>
           </div>
           <div className={styles.logos}>
             <span>
-              <img src='images/icons/Search.png' alt='' />
+              <img src='images/icons/Search.png' alt='search icon' />
             </span>
 
             <Links path='/cart'>
-              <img src='images/icons/shopping-bag.png' alt='' />
+              <img src='images/icons/shopping-bag.png' alt='shopping bag' />
             </Links>
           </div>
         </div>
