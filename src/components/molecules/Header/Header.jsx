@@ -12,7 +12,7 @@ export const Header = () => {
           </div>
           <div className={styles.logo}>
             <Links path='/'>
-              <img src='images/vectors/Logo.png' alt='logo' />
+              <img src='images/vectors/Logo.png' alt='brand logo' />
             </Links>
           </div>
           <div className={styles.logos}>
