@@ -1,22 +1,31 @@
 import React from "react";
-import * as styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss";
+import Links from "../../atoms/Link";
 
 export const Header = () => {
-  return <header>{/* Header section goes in here */}
+  return (
+    <header className={styles.wrapper}>
+      <div className='container'>
+        <div className={styles.headContents}>
+          <div>
+            <img src='images/icons/Menu.png' alt='hamburger' />
+          </div>
+          <div className={styles.logo}>
+            <Links path='/'>
+              <img src='images/vectors/Logo.png' alt='brand logo' />
+            </Links>
+          </div>
+          <div className={styles.logos}>
+            <span>
+              <img src='images/icons/Search.png' alt='search icon' />
+            </span>
 
-  <div className="container">
-     <div className={styles.headContents}>
-       <div className="hamBurger">
-           <img src={"images/icons/Menu.png"} alt="" />
-       </div>
-        <div className="logo">
-           <img src={"images/vectors/Logo.png"} alt="" />
+            <Links path='/cart'>
+              <img src='images/icons/shopping-bag.png' alt='shopping bag' />
+            </Links>
+          </div>
         </div>
-        <div className={styles.logos}>
-            <img src={"images/icons/Search.png"} alt="" />
-            <img src={"images/icons/shopping-bag.png"} alt="" />
-        </div>
-     </div>
-    </div>  
-  </header>;
+      </div>
+    </header>
+  );
 };

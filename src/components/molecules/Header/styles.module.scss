@@ -1,22 +1,23 @@
-.headContents
-{
-    height: 50px;
-     background: #E6E9EE !important;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 0 0 0 ;    
-
-
-    .logos
-    {
-       
-        display: flex;
-        flex-basis: 50px;
-        justify-content: space-between;
-    }
-
-   
-    
+.wrapper {
+  padding-block: 10px;
+  background-color: red;
+  img {
+    margin: 0;
+  }
 }
 
+.headContents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logos {
+    span {
+      margin-right: 15px;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

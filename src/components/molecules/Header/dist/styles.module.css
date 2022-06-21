@@ -1,13 +1,20 @@
-.headContents {
-  height: 50px;
-  background: #E6E9EE !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 0 0 0;
+.wrapper {
+  padding-block: 10px;
+  background-color: red;
 }
-.headContents .logos {
+.wrapper img {
+  margin: 0;
+}
+
+.headContents {
   display: flex;
-  flex-basis: 50px;
   justify-content: space-between;
+  align-items: center;
+}
+.headContents .logos span {
+  margin-right: 15px;
+}
+.headContents .logos img {
+  width: 24px;
+  height: 24px;
 }
