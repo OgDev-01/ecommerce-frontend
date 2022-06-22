@@ -4,7 +4,7 @@ import { Header } from "../../molecules/Header/Header";
 const Layout = ({ children }) => {
   return (
     <div className='main-wrapper'>
-      <header><Header /></header>
+      <Header />
       {/* pages content */}
       <main>{children}</main>
       <footer>Page Footer</footer>
