@@ -1,20 +1,25 @@
 import React from "react";
 import { ButtonFullWidth, ButtonDefault } from "./styles";
 import Links from "../Link";
-export const Button = ({ variants, icon, urlPath, text }) => {
+
+export const Button = ({ variants = "default", icon, urlPath, text }) => {
   if (variants === "full-width") {
     return (
       <ButtonFullWidth>
         <Links path={urlPath}>
           {icon ? (
             <span>
-              {icon.position === "left" && <img src={`${icon.url}`} alt='' />}
+              {icon.position === "left" && (
+                <img src={`${icon.url}`} alt={icon.alt} />
+              )}
               <p>{text}</p>
-              {icon.position === "right" && <img src={`${icon.url}`} alt='' />}
+              {icon.position === "right" && (
+                <img src={`${icon.url}`} alt={icon.alt} />
+              )}
             </span>
           ) : (
             <span>
-              <p>button</p>
+              <p>{text}</p>
             </span>
           )}
         </Links>
@@ -22,22 +27,24 @@ export const Button = ({ variants, icon, urlPath, text }) => {
     );
   }
   return (
-    <>
-      <ButtonDefault>
-        <Links path={urlPath}>
-          {icon ? (
-            <span>
-              {icon.position === "left" && <img src={`${icon.url}`} alt='' />}
-              <p>{text}</p>
-              {icon.position === "right" && <img src={`${icon.url}`} alt='' />}
-            </span>
-          ) : (
-            <span>
-              <p>button</p>
-            </span>
-          )}
-        </Links>
-      </ButtonDefault>
-    </>
+    <ButtonDefault>
+      <Links path={urlPath}>
+        {icon ? (
+          <span>
+            {icon.position === "left" && (
+              <img src={`${icon.url}`} alt={icon.alt} />
+            )}
+            <p>{text}</p>
+            {icon.position === "right" && (
+              <img src={`${icon.url}`} alt={icon.alt} />
+            )}
+          </span>
+        ) : (
+          <span>
+            <p>button</p>
+          </span>
+        )}
+      </Links>
+    </ButtonDefault>
   );
 };

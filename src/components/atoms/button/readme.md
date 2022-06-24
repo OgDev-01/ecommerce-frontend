@@ -4,8 +4,8 @@
 
 # props examples
 
-- `variants` is a string value the specifies the type of button to rendered. accepted values are `"full-width"` and `"default"`.
-- `urlPath` is a string value the specifies the url location of the button. **\* required**
+- `variants` is a string value the specifies the type of button to be rendered. accepted values are `"full-width"` and `"default"`.
+- `urlPath` is a string value that specifies the url location of the button. **\* required**
 - `icon` is an object with 3 values namely: `url`, `position` and `alt`
 - `text` is a string value the specifies the text in the button. **\* required**
 
@@ -20,4 +20,4 @@
 - `variants`
 
 > If `variants` props is not provided,`"default"` is used as a fallback
-> `icon` props must be and object with the three above listed props
+> `icon` props must be an object with the three above listed props

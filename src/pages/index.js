@@ -2,7 +2,7 @@ import Button from "../components/atoms/button";
 
 export default function Home() {
   const spec = {
-    // variants: "full-width",
+    variants: "full-width",
     text: "Button",
     urlPath: "/",
     icon: {
