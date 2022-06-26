@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../molecules/Footer";
 import { Header } from "../../molecules/Header/Header";
 
 const Layout = ({ children }) => {
@@ -7,7 +8,7 @@ const Layout = ({ children }) => {
       <Header />
       {/* pages content */}
       <main>{children}</main>
-      <footer>Page Footer</footer>
+      <Footer />
     </div>
   );
 };

@@ -1,8 +1,10 @@
 .wrapper {
   padding-block: 10px;
-  img {
-    margin: 0;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .headContents {

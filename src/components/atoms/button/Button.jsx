@@ -8,9 +8,13 @@ export const Button = ({ variants, icon, urlPath, text }) => {
         <Links path={urlPath}>
           {icon ? (
             <span>
-              {icon.position === "left" && <img src={`${icon.url}`} alt='' />}
+              {icon.position === "left" && (
+                <img src={`${icon.url}`} alt={icon.alt} />
+              )}
               <p>{text}</p>
-              {icon.position === "right" && <img src={`${icon.url}`} alt='' />}
+              {icon.position === "right" && (
+                <img src={`${icon.url}`} alt={icon.alt} />
+              )}
             </span>
           ) : (
             <span>
@@ -22,14 +26,18 @@ export const Button = ({ variants, icon, urlPath, text }) => {
     );
   }
   return (
-    <>
+    <div style={{ width: "100%", display: "flex" }}>
       <ButtonDefault>
         <Links path={urlPath}>
           {icon ? (
             <span>
-              {icon.position === "left" && <img src={`${icon.url}`} alt='' />}
+              {icon.position === "left" && (
+                <img src={`${icon.url}`} alt={icon.alt} />
+              )}
               <p>{text}</p>
-              {icon.position === "right" && <img src={`${icon.url}`} alt='' />}
+              {icon.position === "right" && (
+                <img src={`${icon.url}`} alt={icon.alt} />
+              )}
             </span>
           ) : (
             <span>
@@ -38,6 +46,6 @@ export const Button = ({ variants, icon, urlPath, text }) => {
           )}
         </Links>
       </ButtonDefault>
-    </>
+    </div>
   );
 };
