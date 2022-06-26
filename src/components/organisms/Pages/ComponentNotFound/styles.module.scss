@@ -1,0 +1,33 @@
+@import "../../../../base/styles/helpers";
+
+.wrapper {
+  padding-top: 120px;
+  width: 100%;
+
+  h1 {
+    text-align: center;
+    font-size: rem(18px);
+    letter-spacing: 4px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+
+  .errorimage {
+    width: 24px;
+    padding-block: 25px;
+    margin-inline: auto;
+  }
+
+  p {
+    width: 272px;
+    font-size: rem(18px);
+    font-weight: 400;
+    text-align: center;
+    line-height: 28px;
+    margin-inline: auto;
+  }
+}
+.buttonWrap {
+  margin-top: 35px;
+}

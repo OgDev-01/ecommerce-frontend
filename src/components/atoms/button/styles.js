@@ -15,7 +15,6 @@ export const ButtonFullWidth = styled.button`
   border: none;
   outline: none;
   a {
-    color: var(--color-off-white);
     width: 100%;
     display: flex;
     align-items: center;
