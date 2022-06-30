@@ -1,22 +1,20 @@
-:root {
-  // color variable
-  --color-primary: #a8715a;
-  --color-secondary: #dd8560;
-  --color-off-white: #fcfcfc;
-  --color-line: #e0cfba;
-  --color-input-bg: #d9dbe9;
-  --color-dark: #000000;
-  --color-dark-80: #333333;
-  --color-dark-50: #555555;
-  --color-dark-30: #888888;
-  --color-background: #f8f0e7;
-  --color-white: #ffffff
-  
+//colors variables
+$color-primary: #a8715a;
+$color-secondary: #dd8560;
+$color-off-white: #fcfcfc;
+$color-line: #e0cfba;
+$color-input-bg: #d9dbe9;
+$color-dark: #000000;
+$color-dark-80: #333333;
+$color-dark-50: #555555;
+$color-dark-30: #888888;
+$color-bg: #f8f0e7;
+$color-white: #ffffff;
+$nav-bg: #e7eaef;
 
-  // media screen sizes
-  --sm: 576px;
-  --md: 768px;
-  --lg: 992px;
-  --xl: 1200px;
-  --xxl: 1440px;
-}
+// media query sizes
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;

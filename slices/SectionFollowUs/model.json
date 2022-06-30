@@ -1,0 +1,44 @@
+{
+  "id": "section_follow_us",
+  "type": "SharedSlice",
+  "name": "SectionFollowUs",
+  "description": "SectionFollowUs",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SectionFollowUs",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "socialIcon": {
+          "type": "Image",
+          "config": {
+            "label": "Social Icon",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "followCardImg": {
+          "type": "Image",
+          "config": {
+            "label": "Follow Card Img",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

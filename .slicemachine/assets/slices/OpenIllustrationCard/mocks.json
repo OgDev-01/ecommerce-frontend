@@ -1,0 +1,82 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "open_illustration_card",
+    "items": [
+      {
+        "illustrationImg": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+        },
+        "illustrationCaption": [
+          {
+            "type": "paragraph",
+            "text": "Nostrud ullamco fugiat ullamco. Minim deserunt et cupidatat ullamco esse adipisicing minim proident nulla ut magna cillum commodo. Reprehenderit minim sint eu ut laborum est enim fugiat ea qui mollit aute irure.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "illustrationImg": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+        },
+        "illustrationCaption": [
+          {
+            "type": "paragraph",
+            "text": "Consectetur ut tempor minim fugiat adipisicing consectetur commodo magna labore adipisicing ad magna velit eu consectetur.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "illustrationImg": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+        },
+        "illustrationCaption": [
+          {
+            "type": "paragraph",
+            "text": "Nisi ea nostrud mollit non aliqua velit qui irure pariatur.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "illustrationImg": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+        },
+        "illustrationCaption": [
+          {
+            "type": "paragraph",
+            "text": "Deserunt dolor velit nisi veniam qui minim eu est proident sint deserunt minim ipsum esse.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {}
+  }
+]

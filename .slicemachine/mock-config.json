@@ -1,0 +1,78 @@
+{
+  "_cts": {
+    "pages": {},
+    "home": {
+      "sectionMainHero": {
+        "heroCaption": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
+          }
+        }
+      }
+    },
+    "illustration": {},
+    "contact": {},
+    "about": {}
+  },
+  "slices": {
+    "Banner": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Brandsponsor": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "SectionCollection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "BrandVideo": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "SectionOpenFashion": {
+      "default": {
+        "primary": {},
+        "items": {
+          "illustrationCaption": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "OpenIllustrationCard": {
+      "default": {
+        "primary": {},
+        "items": {
+          "illustrationCaption": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "SectionFollowUs": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

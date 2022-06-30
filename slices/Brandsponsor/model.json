@@ -1,0 +1,27 @@
+{
+  "id": "brandsponsor",
+  "type": "SharedSlice",
+  "name": "Brandsponsor",
+  "description": "Brandsponsor",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Brandsponsor",
+      "primary": {},
+      "items": {
+        "brandimage": {
+          "type": "Image",
+          "config": {
+            "label": "Brandimage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

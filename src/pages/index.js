@@ -1,21 +1,21 @@
-import Button from "../components/atoms/button";
+import Button from "@/components/atoms/button";
+import { createClient, linkResolver } from "../../prismicio";
 
-export default function Home() {
-  const spec = {
-    variants: "full-width",
-    text: "Button",
-    urlPath: "/",
-    icon: {
-      url: "/images/icons/shopping-bag-white.png",
-      alt: "shopping bag",
-      position: "left",
+import ComponentHome from "@/components/organisms/Pages/ComponentHomePage";
+export default function Home({ documents }) {
+  const { data } = documents;
+  console.log(data);
+  return <ComponentHome {...data} />;
+}
+
+export async function getStaticProps({ previewData }) {
+  const client = createClient({ previewData });
+
+  const documents = await client.getByUID("home", "home");
+
+  return {
+    props: {
+      documents,
     },
   };
-
-  return (
-    <div className=''>
-      Home page Section
-      <Button {...spec}></Button>
-    </div>
-  );
 }

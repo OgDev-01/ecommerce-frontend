@@ -1,0 +1,174 @@
+{
+  "id": "home",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "sectionMainHero": {
+        "type": "Group",
+        "config": {
+          "label": "Section Main Hero",
+          "fields": {
+            "heroImage": {
+              "type": "Image",
+              "config": {
+                "label": "Hero Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "heroCaption": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Hero Caption",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading1"
+              }
+            },
+            "heroLinkText": {
+              "type": "Text",
+              "config": {
+                "label": "Hero Link Text",
+                "placeholder": ""
+              }
+            },
+            "heroLinkUrlPath": {
+              "type": "Text",
+              "config": {
+                "label": "Hero Link Url Path",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "sectionBrandSponsors": {
+        "type": "Group",
+        "config": {
+          "label": "Section Brand Sponsors",
+          "fields": {
+            "img1": {
+              "type": "Image",
+              "config": {
+                "label": "Img1",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "img2": {
+              "type": "Image",
+              "config": {
+                "label": "Img2",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "img3": {
+              "type": "Image",
+              "config": {
+                "label": "Img3",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "img4": {
+              "type": "Image",
+              "config": {
+                "label": "Img4",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "img5": {
+              "type": "Image",
+              "config": {
+                "label": "Img5",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "img6": {
+              "type": "Image",
+              "config": {
+                "label": "Img6",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "sectionCollection": {
+        "type": "Group",
+        "config": {
+          "label": "Section Collection",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "landscapeImg": {
+              "type": "Image",
+              "config": {
+                "label": "Landscape Img",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "portraitImg": {
+              "type": "Image",
+              "config": {
+                "label": "Portrait Img",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "video": {
+              "type": "Image",
+              "config": {
+                "label": "Video",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "section_open_fashion": {
+              "type": "SharedSlice"
+            },
+            "section_follow_us": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

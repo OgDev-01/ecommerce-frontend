@@ -1,18 +1,19 @@
-import Link from "next/link";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../../prismicio";
+import Links from "@/components/atoms/Link";
 import { Apollo } from "@/base/libs/apolloClient";
-import Layout from "../components/organisms/Layouts/Layout";
+import Layout from "@/components/organisms/Layouts/Layout";
 import "../styles/globals.scss";
+
 function MyApp({ Component, pageProps }) {
   return (
     <PrismicProvider
       linkResolver={linkResolver}
       internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <a {...props}>{children}</a>
-        </Link>
+        <Links {...props} path={href}>
+          {children}
+        </Links>
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>

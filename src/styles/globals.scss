@@ -1,7 +1,13 @@
-@import "../base/styles/helpers";
-@import "../base/styles/resets";
-@import "../base/styles/variables";
+@import "@/base/styles/helpers";
+@import "@/base/styles/resets";
+@import "@/base/styles/variables";
 @import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
+
+@font-face {
+  font-family: "Bodoni moda 28pt";
+  src: url("../assets/fonts/BodoniModa_28pt-BoldItalic.ttf");
+  font-weight: 700;
+}
 
 html,
 body {
@@ -14,26 +20,27 @@ section {
   padding-bottom: 30px;
 }
 main {
-  background-color: var(--color-white);
+  background-color: $color-white;
+  padding-top: 50px;
 }
 .container {
   max-width: 100%;
   margin: 0 24px;
 
-  @media (min-width: var(--sm)) {
+  @media (min-width: $sm) {
     max-width: 540px;
     margin: 0 auto;
   }
-  @media (min-width: var(--md)) {
+  @media (min-width: $md) {
     max-width: 720px;
   }
-  @media (min-width: var(--lg)) {
+  @media (min-width: $lg) {
     max-width: 960px;
   }
-  @media (min-width: var(--xl)) {
+  @media (min-width: $xl) {
     max-width: 1140px;
   }
-  @media (min-width: var(--xxl)) {
+  @media (min-width: $xxl) {
     max-width: 1260px;
   }
 }

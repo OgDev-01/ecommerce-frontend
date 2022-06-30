@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ButtonFullWidth = styled.button`
   width: 100%;
   height: 56px;
-  background-color: var(--color-dark);
+  background-color: #000000;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   font-weight: 400;
@@ -28,7 +28,7 @@ export const ButtonFullWidth = styled.button`
         margin: 0;
         margin-inline: 15px;
         margin-top: 2px;
-        color: var(--color-off-white);
+        color: #fcfcfc;
       }
     }
   }
@@ -36,7 +36,7 @@ export const ButtonFullWidth = styled.button`
 export const ButtonDefault = styled.button`
   padding-inline: 32px;
   height: 50px;
-  background-color: var(--color-dark);
+  background-color: #000000;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   font-weight: 400;
@@ -56,7 +56,7 @@ export const ButtonDefault = styled.button`
         margin: 0;
         margin-inline: 18px;
         margin-top: 2px;
-        color: var(--color-off-white);
+        color: #fcfcfc;
       }
     }
   }
