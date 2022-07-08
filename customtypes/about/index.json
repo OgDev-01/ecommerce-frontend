@@ -18,6 +18,17 @@
           "label": "Title",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "our_story": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

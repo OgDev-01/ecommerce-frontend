@@ -9,6 +9,14 @@
             "blocks": 1
           }
         }
+      },
+      "sectionCollection": {
+        "title": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
+          }
+        }
       }
     },
     "illustration": {},
@@ -72,6 +80,24 @@
     "SectionFollowUs": {
       "default": {
         "primary": {}
+      }
+    },
+    "OurStory": {
+      "default": {
+        "primary": {
+          "story": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "storyTwo": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }

@@ -29,7 +29,13 @@
               "config": {
                 "label": "Hero Image",
                 "constraint": {},
-                "thumbnails": []
+                "thumbnails": [
+                  {
+                    "name": "mobile",
+                    "width": 576,
+                    "height": 642
+                  }
+                ]
               }
             },
             "heroCaption": {
@@ -58,62 +64,6 @@
           }
         }
       },
-      "sectionBrandSponsors": {
-        "type": "Group",
-        "config": {
-          "label": "Section Brand Sponsors",
-          "fields": {
-            "img1": {
-              "type": "Image",
-              "config": {
-                "label": "Img1",
-                "constraint": {},
-                "thumbnails": []
-              }
-            },
-            "img2": {
-              "type": "Image",
-              "config": {
-                "label": "Img2",
-                "constraint": {},
-                "thumbnails": []
-              }
-            },
-            "img3": {
-              "type": "Image",
-              "config": {
-                "label": "Img3",
-                "constraint": {},
-                "thumbnails": []
-              }
-            },
-            "img4": {
-              "type": "Image",
-              "config": {
-                "label": "Img4",
-                "constraint": {},
-                "thumbnails": []
-              }
-            },
-            "img5": {
-              "type": "Image",
-              "config": {
-                "label": "Img5",
-                "constraint": {},
-                "thumbnails": []
-              }
-            },
-            "img6": {
-              "type": "Image",
-              "config": {
-                "label": "Img6",
-                "constraint": {},
-                "thumbnails": []
-              }
-            }
-          }
-        }
-      },
       "sectionCollection": {
         "type": "Group",
         "config": {
@@ -125,7 +75,7 @@
                 "label": "Title",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                "single": "heading2"
               }
             },
             "landscapeImg": {
@@ -148,6 +98,22 @@
               "type": "Image",
               "config": {
                 "label": "Video",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "sectionBrandSponsors": {
+        "type": "Group",
+        "config": {
+          "label": "Section Brand Sponsors",
+          "fields": {
+            "brandImages": {
+              "type": "Image",
+              "config": {
+                "label": "Brand Images",
                 "constraint": {},
                 "thumbnails": []
               }

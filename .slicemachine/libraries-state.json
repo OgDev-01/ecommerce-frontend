@@ -86,9 +86,72 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\Smith\\Desktop\\Webhallenges\\ecommerce\\frontend\\.slicemachine\\assets\\slices\\Banner\\default\\preview.png",
+            "path": "/home/og-dev/Desktop/Web-Projects/ecommerce-frontend/.slicemachine/assets/slices/Banner/default/preview.png",
             "width": 800,
             "height": 112
+          }
+        }
+      },
+      "brand_video": {
+        "library": "slices",
+        "id": "brand_video",
+        "name": "BrandVideo",
+        "description": "BrandVideo",
+        "model": {
+          "id": "brand_video",
+          "type": "SharedSlice",
+          "name": "BrandVideo",
+          "description": "BrandVideo",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BrandVideo",
+              "primary": {
+                "video": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Video",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "brand_video",
+            "items": [],
+            "primary": {
+              "video": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/og-dev/Desktop/Web-Projects/ecommerce-frontend/.slicemachine/assets/slices/BrandVideo/default/preview.png",
+            "width": 800,
+            "height": 113
           }
         }
       },
@@ -184,70 +247,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\Smith\\Desktop\\Webhallenges\\ecommerce\\frontend\\.slicemachine\\assets\\slices\\Brandsponsor\\default\\preview.png",
-            "width": 800,
-            "height": 113
-          }
-        }
-      },
-      "brand_video": {
-        "library": "slices",
-        "id": "brand_video",
-        "name": "BrandVideo",
-        "description": "BrandVideo",
-        "model": {
-          "id": "brand_video",
-          "type": "SharedSlice",
-          "name": "BrandVideo",
-          "description": "BrandVideo",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "BrandVideo",
-              "primary": {
-                "video": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Video",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "name": "Default",
-            "slice_type": "brand_video",
-            "items": [],
-            "primary": {
-              "video": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": "Placeholder image",
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
-              }
-            }
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Smith\\Desktop\\Webhallenges\\ecommerce\\frontend\\.slicemachine\\assets\\slices\\BrandVideo\\default\\preview.png",
+            "path": "/home/og-dev/Desktop/Web-Projects/ecommerce-frontend/.slicemachine/assets/slices/Brandsponsor/default/preview.png",
             "width": 800,
             "height": 113
           }
@@ -382,6 +382,110 @@
         },
         "screenshotPaths": {}
       },
+      "our_story": {
+        "library": "slices",
+        "id": "our_story",
+        "name": "OurStory",
+        "description": "OurStory",
+        "model": {
+          "id": "our_story",
+          "type": "SharedSlice",
+          "name": "OurStory",
+          "description": "OurStory",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "OurStory",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "story": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "StoryOne",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "storyTwo": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Story Two",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "storyHero": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Story Hero",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "our_story",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Strategize frictionless synergies",
+                  "spans": []
+                }
+              ],
+              "story": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt consequat sint pariatur. Excepteur exercitation commodo commodo consectetur amet nostrud minim et.",
+                  "spans": []
+                }
+              ],
+              "storyTwo": [
+                {
+                  "type": "paragraph",
+                  "text": "Irure eu sit esse labore sint aliquip deserunt adipisicing Lorem est officia tempor duis. Ea consectetur consectetur aliquip et enim enim ipsum.",
+                  "spans": []
+                }
+              ],
+              "storyHero": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "section_collection": {
         "library": "slices",
         "id": "section_collection",
@@ -464,7 +568,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\Smith\\Desktop\\Webhallenges\\ecommerce\\frontend\\.slicemachine\\assets\\slices\\SectionCollection\\default\\preview.png",
+            "path": "/home/og-dev/Desktop/Web-Projects/ecommerce-frontend/.slicemachine/assets/slices/SectionCollection/default/preview.png",
             "width": 800,
             "height": 113
           }
