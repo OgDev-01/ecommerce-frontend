@@ -61,3 +61,28 @@ export const ButtonDefault = styled.button`
     }
   }
 `;
+export const ButtonSubmit = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+
+  span {
+    display: flex;
+    p {
+      padding: 0;
+      margin: 0;
+      margin-inline: 15px;
+      margin-top: 2px;
+      color: #fcfcfc;
+    }
+  }
+`;

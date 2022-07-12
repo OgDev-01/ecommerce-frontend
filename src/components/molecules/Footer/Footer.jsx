@@ -3,21 +3,23 @@ import HorizontalLine from "../../atoms/horizontalLine";
 import { SocialLink } from "../../atoms/socialLink/SocialLink";
 import Links from "../../atoms/Link";
 import * as styles from "./styles.module.scss";
+
+export const socials = [
+  {
+    urlPath: "https://www.twitter.com",
+    socialName: "twitter",
+  },
+  {
+    urlPath: "https://www.instagram.com",
+    socialName: "instagram",
+  },
+  {
+    urlPath: "https://www.youtube.com",
+    socialName: "youtube",
+  },
+];
 export const Footer = () => {
-  const socials = [
-    {
-      urlPath: "https://www.twitter.com",
-      socialName: "twitter",
-    },
-    {
-      urlPath: "https://www.instagram.com",
-      socialName: "instagram",
-    },
-    {
-      urlPath: "https://www.youtube.com",
-      socialName: "youtube",
-    },
-  ];
+  
   const mainLinks = [
     { urlPath: "/about", name: "About" },
     { urlPath: "/contact", name: "Contact" },

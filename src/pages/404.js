@@ -6,7 +6,7 @@ const PageError = () => {
      text: "Home Page",
      urlPath: "/",
      icon: {
-       url: "/images/icons/arrow-left.png",
+       url: "/images/icons/arrow-left.svg",
        alt: "arrow right",
        position: "left",
      },

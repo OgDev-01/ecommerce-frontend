@@ -1,0 +1,24 @@
+@import "@/base/styles/helpers";
+.wrapper {
+  padding-top: 60px;
+  padding-bottom: 0px;
+  h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: rem(18px);
+    letter-spacing: 4px;
+  }
+}
+.story {
+  padding: 30px 0;
+
+  p {
+    font-size: rem(16px);
+    line-height: 22px;
+  }
+  div {
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+}

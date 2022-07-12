@@ -5,7 +5,7 @@ export function HorizontalLine() {
     <div style={{ width: "100%", display: "flex" }}>
       <img
         style={{ marginInline: "auto" }}
-        src='/images/vectors/8.png'
+        src='/images/icons/10.svg'
         alt='horizontal line'
       />
     </div>

@@ -11,11 +11,14 @@ const ComponentNotFound = (props) => {
           </div>
 
           <div className={styles.errorimage}>
-            <img src='images/icons/vector.png' width='26px' alt='error logo' />
+            <img src='images/icons/tailor-dummy.svg' alt='error logo' />
           </div>
 
           <div>
-            <p>We can't find the page you looking for, it will return to the</p>
+            <p>
+              We can't find the page you looking for, click the{" "}
+              <strong>button</strong>{" "}to return home
+            </p>
           </div>
         </div>
         <div className={styles.buttonWrap}>

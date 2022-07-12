@@ -1,0 +1,24 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.wrapper {
+  background-color: $color-gray;
+  padding-top: 0.5px;
+}
+.brandLogo {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.desc {
+  text-align: center;
+  width: 70%;
+  margin-inline: auto;
+  font-size: rem(14px);
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: $color-dark-50;
+  font-weight: 400;
+}
+
+.lineRope {
+  margin-top: 20px;
+}

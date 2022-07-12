@@ -1,0 +1,12 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.img {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.desc {
+  font-size: rem(18px);
+  a {
+    color: $color-dark-80;
+  }
+}

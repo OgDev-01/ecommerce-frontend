@@ -1,0 +1,28 @@
+@import "@/base/styles/helpers";
+.wrapper {
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+.wrapper :first-child {
+  margin-bottom: -5px;
+
+  h2 {
+    font-size: rem(18px);
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+}
+.portrait {
+  max-width: 280px;
+  margin-inline: auto;
+}
+.video,
+.landscape {
+  max-width: 100%;
+}

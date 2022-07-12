@@ -1,0 +1,27 @@
+@import "@/base/styles/helpers";
+.wrapper {
+  margin-top: 80px;
+  h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 20px 2px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.formDesc {
+  margin-top: 10px;
+  padding-inline: 25px;
+  text-align: center;
+  line-height: 22px;
+  font-size: rem(14px);
+}

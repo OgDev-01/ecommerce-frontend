@@ -1,11 +1,10 @@
-import React from "react";
-import { ButtonFullWidth, ButtonDefault } from "./styles";
+import { ButtonFullWidth, ButtonDefault, ButtonSubmit } from "./styles";
 import Links from "../Link";
 
-export const Button = ({ variants = "default", icon, urlPath, text }) => {
+export const Button = ({ variants = "default", icon, urlPath, text, type }) => {
   if (variants === "full-width") {
     return (
-      <ButtonFullWidth>
+      <ButtonFullWidth type={type}>
         <Links path={urlPath}>
           {icon ? (
             <span>
@@ -26,9 +25,30 @@ export const Button = ({ variants = "default", icon, urlPath, text }) => {
       </ButtonFullWidth>
     );
   }
+  if (type === "submit") {
+    return (
+      <ButtonSubmit type={"submit"}>
+        {icon ? (
+          <span>
+            {icon.position === "left" && (
+              <img src={`${icon.url}`} alt={icon.alt} />
+            )}
+            <p>{text}</p>
+            {icon.position === "right" && (
+              <img src={`${icon.url}`} alt={icon.alt} />
+            )}
+          </span>
+        ) : (
+          <span>
+            <p>{text}</p>
+          </span>
+        )}
+      </ButtonSubmit>
+    );
+  }
   return (
     <div style={{ width: "100%", display: "flex" }}>
-      <ButtonDefault>
+      <ButtonDefault type={type}>
         <Links path={urlPath}>
           {icon ? (
             <span>
@@ -42,7 +62,7 @@ export const Button = ({ variants = "default", icon, urlPath, text }) => {
             </span>
           ) : (
             <span>
-              <p>button</p>
+              <p>{text}</p>
             </span>
           )}
         </Links>

@@ -16,16 +16,52 @@ body {
   font-family: "Tenor Sans", sans-serif;
   font-weight: 400;
 }
+.active {
+  opacity: 0.4;
+}
+
 section {
   padding-bottom: 30px;
+  margin-bottom: 25px;
 }
 main {
   background-color: $color-white;
   padding-top: 50px;
 }
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: rem(18px);
+}
+
+// utility classes
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.grey {
+  background-color: #e7ecf0;
+}
+.light {
+  background-color: #ffffff;
+}
+.block-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 .container {
   max-width: 100%;
-  margin: 0 24px;
+  margin: 0 15px;
 
   @media (min-width: $sm) {
     max-width: 540px;

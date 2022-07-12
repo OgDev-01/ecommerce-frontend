@@ -1,0 +1,14 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.wrapper {
+  max-width: 165px;
+  padding: 4px 0;
+  text-align: center;
+}
+.cardCaption {
+  margin-top: 8px;
+  line-height: 20px;
+  font-size: rem(13px);
+  color: $color-dark-50;
+  font-weight: 400;
+}

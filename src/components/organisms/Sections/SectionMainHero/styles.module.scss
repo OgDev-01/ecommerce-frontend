@@ -2,7 +2,6 @@
 @import "@/base/styles/variables";
 .wrapper {
   position: relative;
-  background: $nav-bg;
   padding-bottom: 0;
   h1 {
     position: absolute;
@@ -21,7 +20,7 @@
 }
 .heroImage {
   margin-inline: auto;
-  max-width: 375px;
+  // max-width: 375px;
   height: auto;
 }
 .buttonWrap {
