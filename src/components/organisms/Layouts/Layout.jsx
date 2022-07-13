@@ -30,31 +30,31 @@ const Layout = ({ children, ...customMeta }) => {
     }
   }, [isOpen, cartOpen]);
 
-  const deviceType = () => {
-    const userAgent = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
-      return "tablet";
-    } else if (
-      /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-        userAgent
-      )
-    ) {
-      return "mobile";
-    }
-    return "desktop";
-  };
-  useEffect(() => {
-    if (typeof window !== undefined) deviceType();
-  }, []);
-  useEffect(() => {
-    if (typeof window !== undefined && deviceType !== "mobile") {
-      router.push("/", "/?mobile=false");
-    }
-  }, []);
+  // const deviceType = () => {
+  //   const userAgent = navigator.userAgent;
+  //   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
+  //     return "tablet";
+  //   } else if (
+  //     /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+  //       userAgent
+  //     )
+  //   ) {
+  //     return "mobile";
+  //   }
+  //   return "desktop";
+  // };
+  // useEffect(() => {
+  //   if (typeof window !== undefined) deviceType();
+  // }, []);
+  // useEffect(() => {
+  //   if (typeof window !== undefined && deviceType !== "mobile") {
+  //     router.push("/", "/?mobile=false");
+  //   }
+  // }, []);
 
-  if (deviceType !== "mobile") {
-    return <NotMobile />;
-  }
+  // if (deviceType !== "mobile") {
+  //   return <NotMobile />;
+  // }
 
   return (
     <div className='main-wrapper'>
