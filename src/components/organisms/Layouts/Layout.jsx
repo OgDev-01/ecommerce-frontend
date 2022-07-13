@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@/components/molecules/Header";
 import { useRouter } from "next/router";
@@ -14,12 +14,15 @@ import { useRecoilValue } from "recoil";
 import Cart from "@/components/molecules/Cart";
 import NotMobile from "../Pages/ComponentNotMobile";
 const Layout = ({ children, ...customMeta }) => {
+  const [mounted, setMounted] = useState(false);
   const isOpen = useRecoilValue(navState);
   const searchOpen = useRecoilValue(searchToggle);
   const cartOpen = useRecoilValue(cartState);
   const router = useRouter();
   const meta = {
     type: "website",
+    description:
+      "Open Fashion - Free Ecommerce UI Kit is a free download UI kit. You can open Open Fashion - Free Ecommerce UI Kit file by Figma.",
     ...customMeta,
   };
   useEffect(() => {
@@ -30,37 +33,37 @@ const Layout = ({ children, ...customMeta }) => {
     }
   }, [isOpen, cartOpen]);
 
-  // const deviceType = () => {
-  //   const userAgent = navigator.userAgent;
-  //   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
-  //     return "tablet";
-  //   } else if (
-  //     /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-  //       userAgent
-  //     )
-  //   ) {
-  //     return "mobile";
-  //   }
-  //   return "desktop";
-  // };
-  // useEffect(() => {
-  //   if (typeof window !== undefined) deviceType();
-  // }, []);
-  // useEffect(() => {
-  //   if (typeof window !== undefined && deviceType !== "mobile") {
-  //     router.push("/", "/?mobile=false");
-  //   }
-  // }, []);
 
-  // if (deviceType !== "mobile") {
-  //   return <NotMobile />;
-  // }
+
+  const deviceType = () => {
+    const userAgent = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
+      return "tablet";
+    } else if (
+      /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+        userAgent
+      )
+    ) {
+      return "mobile";
+    }
+    return "desktop";
+  };
+
+  useEffect(() => {
+    const agent = deviceType();
+    agent !== "mobile" && router.push("/", "/?mobile=false")
+      ? setMounted(false)
+      : router.push("/") && setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <NotMobile />;
+  }
 
   return (
     <div className='main-wrapper'>
       <Head>
         <title>{meta.title}</title>
-        <meta name='robots' content='follow, index' />
         <meta content={meta.description} name='description' />
         <meta property='og:type' content={meta.type} />
         <meta
@@ -78,11 +81,30 @@ const Layout = ({ children, ...customMeta }) => {
         {meta.date && (
           <meta property='article:published_time' content={meta.date} />
         )}
+
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          rel='preload'
+          as='font'
+          href='/fonts/BodoniModa_28pt-BoldItalic.ttf'
+        ></link>
         <link rel='preload' as='image' href='/images/icons/Close.svg'></link>
         <link rel='preload' as='image' href='/images/icons/Location.svg'></link>
         <link rel='preload' as='image' href='/images/icons/Call.svg'></link>
         <link rel='preload' as='image' href='/images/icons/Twitter.svg'></link>
         <link rel='preload' as='image' href='/images/icons/YouTube.svg'></link>
+        <link rel='preload' as='image' href='/images/icons/Plus.svg'></link>
+        <link
+          rel='preload'
+          as='image'
+          href='/images/icons/Plus-dark.svg'
+        ></link>
+        <link
+          rel='preload'
+          as='image'
+          href='/images/icons/minus-dark.svg'
+        ></link> 
         <link
           rel='preload'
           as='image'
