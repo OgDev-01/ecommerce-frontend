@@ -2,7 +2,6 @@ import HorizontalLine from "@/components/atoms/horizontalLine";
 import NextImage from "@/components/atoms/NextImage";
 import RichText from "@/components/atoms/RichText";
 import SignupForm from "@/components/molecules/SignupForm";
-import { useEffect, useState, useRef } from "react";
 import * as styles from "./styles.module.scss";
 
 export const ComponentAbout = ({ slices, title }) => {
