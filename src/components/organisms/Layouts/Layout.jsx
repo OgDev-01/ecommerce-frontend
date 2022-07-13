@@ -5,23 +5,57 @@ import { useRouter } from "next/router";
 import Nav from "@/components/molecules/Nav";
 import Footer from "../../molecules/Footer";
 import SearchOverlay from "@/components/molecules/SearchOverlay";
-import { navState, searchToggle } from "@/base/context/Atoms/atomstate";
+import {
+  navState,
+  searchToggle,
+  cartState,
+} from "@/base/context/Atoms/atomstate";
 import { useRecoilValue } from "recoil";
+import Cart from "@/components/molecules/Cart";
+import NotMobile from "../Pages/ComponentNotMobile";
 const Layout = ({ children, ...customMeta }) => {
   const isOpen = useRecoilValue(navState);
   const searchOpen = useRecoilValue(searchToggle);
+  const cartOpen = useRecoilValue(cartState);
   const router = useRouter();
   const meta = {
     type: "website",
     ...customMeta,
   };
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen || cartOpen) {
       document.documentElement.classList.add("block-scroll");
     } else {
       document.documentElement.classList.remove("block-scroll");
     }
-  }, [isOpen]);
+  }, [isOpen, cartOpen]);
+
+  const deviceType = () => {
+    const userAgent = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
+      return "tablet";
+    } else if (
+      /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+        userAgent
+      )
+    ) {
+      return "mobile";
+    }
+    return "desktop";
+  };
+  useEffect(() => {
+    if (typeof window !== undefined) deviceType();
+  }, []);
+  useEffect(() => {
+    if (typeof window !== undefined && deviceType !== "mobile") {
+      router.push("/", "/?mobile=false");
+    }
+  }, []);
+
+  if (deviceType !== "mobile") {
+    return <NotMobile />;
+  }
+
   return (
     <div className='main-wrapper'>
       <Head>
@@ -44,10 +78,21 @@ const Layout = ({ children, ...customMeta }) => {
         {meta.date && (
           <meta property='article:published_time' content={meta.date} />
         )}
+        <link rel='preload' as='image' href='/images/icons/Close.svg'></link>
+        <link rel='preload' as='image' href='/images/icons/Location.svg'></link>
+        <link rel='preload' as='image' href='/images/icons/Call.svg'></link>
+        <link rel='preload' as='image' href='/images/icons/Twitter.svg'></link>
+        <link rel='preload' as='image' href='/images/icons/YouTube.svg'></link>
+        <link
+          rel='preload'
+          as='image'
+          href='/images/icons/Instagram.svg'
+        ></link>
       </Head>
       <Header />
       {isOpen && <Nav />}
       {searchOpen && <SearchOverlay />}
+      {cartOpen && <Cart />}
       <main>{children}</main>
       {router.asPath !== "/about" && <Footer />}
     </div>

@@ -14,9 +14,9 @@ export function MainHero({
   return (
     <section className={styles.wrapper}>
       <div className={styles.heroImage}>
-         <NextImage field={heroImage}  />
+        <NextImage preload={true} field={heroImage} />
       </div>
-     
+
       <RichText field={heroCaption} className={styles.caption} />
       <div className={styles.buttonWrap}>
         <button className={styles.button}>

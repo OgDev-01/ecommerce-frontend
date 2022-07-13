@@ -1,0 +1,78 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.wrapper {
+  z-index: 12;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: $color-white;
+  padding-top: 20px;
+  overflow: hidden;
+  h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: $color-dark-30;
+    font-size: rem(16px);
+    margin: 0;
+  }
+}
+.cartHead {
+  margin-top: 30px;
+  padding-right: 15px;
+  flex-wrap: nowrap;
+  padding-bottom: 5px;
+
+  span {
+    font-size: rem(14px);
+    color: $color-white;
+    background-color: $color-dark;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+}
+.cartItemWrap {
+  position: relative;
+  height: 80vh;
+  padding-top: 20px;
+  overflow-y: scroll;
+  padding-bottom: 120px;
+  overflow: -moz-scrollbars-none; /*For older versions of Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  span {
+    position: absolute;
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.sumWrap {
+  position: relative;
+  top: 50px;
+  border-top: 1px solid $color-dark;
+  padding-top: 20px;
+
+  h4 {
+    text-transform: uppercase;
+    margin: 0;
+  }
+  p {
+    color: $color-primary;
+    letter-spacing: 2px;
+    font-size: rem(16px);
+  }
+}
+.notice {
+  line-height: 24px;
+  color: $color-dark-30;
+  margin-block: 20px;
+  font-size: rem(16px);
+}

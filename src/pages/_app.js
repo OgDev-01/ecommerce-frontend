@@ -5,6 +5,7 @@ import Links from "@/components/atoms/Link";
 import { RecoilRoot } from "recoil";
 import "../styles/globals.scss";
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <RecoilRoot>

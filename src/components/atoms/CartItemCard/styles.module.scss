@@ -1,0 +1,47 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.card {
+  column-gap: 10px;
+  flex-wrap: nowrap;
+}
+.cardDetails {
+  padding-top: 12px;
+}
+.cardImg {
+  width: 110px;
+  max-width: 110px;
+}
+.desc {
+  font-size: rem(15px);
+  margin-top: 5px;
+}
+.action {
+  width: max-content;
+  margin-top: 15px;
+  font-size: rem(14px);
+}
+.plus {
+  margin-left: 10px;
+  position: absolute;
+  img {
+    top: 50%;
+    bottom: 50%;
+    transform: translate(2px, 2px);
+  }
+}
+.minus {
+  margin-right: 10px;
+}
+.plus,
+.minus {
+  border-radius: 50%;
+  border: 1px solid #c4c4c4;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.price {
+  color: $color-primary;
+  margin-top: 13px;
+  font-size: rem(17px);
+}
