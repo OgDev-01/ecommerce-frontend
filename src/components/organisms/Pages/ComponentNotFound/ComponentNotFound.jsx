@@ -16,8 +16,8 @@ const ComponentNotFound = (props) => {
 
           <div>
             <p>
-              We can't find the page you looking for, click the{" "}
-              <strong>button</strong>{" "}to return home
+              We cant find the page you looking for, click the &apos;
+              <strong>button</strong> to return home
             </p>
           </div>
         </div>
