@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: process.env.STRAPI_ENDPOINT_LOCAL,
+  uri: process.env.STRAPI_ENDPOINT_PRODUCTION_GRAPHQL,
   cache: new InMemoryCache(),
 });
 

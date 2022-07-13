@@ -1,7 +1,6 @@
-import Button from "../../../atoms/button";
 import * as styles from "./styles.module.scss";
 
-const ComponentNotFound = (props) => {
+export const NotMobile = () => {
   return (
     <section>
       <div className='container'>
@@ -16,17 +15,12 @@ const ComponentNotFound = (props) => {
 
           <div>
             <p>
-              We cant find the page you looking for, click the &apos;
-              <strong>button</strong> to return home
+              Visit the website on a mobile device to explore as it is only
+              available on <strong>mobile</strong> devices
             </p>
           </div>
-        </div>
-        <div className={styles.buttonWrap}>
-          <Button {...props} />
         </div>
       </div>
     </section>
   );
 };
-
-export default ComponentNotFound;

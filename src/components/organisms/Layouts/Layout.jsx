@@ -5,12 +5,19 @@ import { useRouter } from "next/router";
 import Nav from "@/components/molecules/Nav";
 import Footer from "../../molecules/Footer";
 import SearchOverlay from "@/components/molecules/SearchOverlay";
-import { navState, searchToggle } from "@/base/context/Atoms/atomstate";
+import {
+  navState,
+  searchToggle,
+  cartState,
+} from "@/base/context/Atoms/atomstate";
 import { useRecoilValue } from "recoil";
+import Cart from "@/components/molecules/Cart";
+import NotMobile from "../Pages/ComponentNotMobile";
 const Layout = ({ children, ...customMeta }) => {
   const [mounted, setMounted] = useState(false);
   const isOpen = useRecoilValue(navState);
   const searchOpen = useRecoilValue(searchToggle);
+  const cartOpen = useRecoilValue(cartState);
   const router = useRouter();
   const meta = {
     type: "website",
@@ -19,12 +26,14 @@ const Layout = ({ children, ...customMeta }) => {
     ...customMeta,
   };
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen || cartOpen) {
       document.documentElement.classList.add("block-scroll");
     } else {
       document.documentElement.classList.remove("block-scroll");
     }
   }, [isOpen, cartOpen]);
+
+
 
   const deviceType = () => {
     const userAgent = navigator.userAgent;
@@ -72,6 +81,7 @@ const Layout = ({ children, ...customMeta }) => {
         {meta.date && (
           <meta property='article:published_time' content={meta.date} />
         )}
+
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
@@ -94,7 +104,7 @@ const Layout = ({ children, ...customMeta }) => {
           rel='preload'
           as='image'
           href='/images/icons/minus-dark.svg'
-        ></link>
+        ></link> 
         <link
           rel='preload'
           as='image'
@@ -104,6 +114,7 @@ const Layout = ({ children, ...customMeta }) => {
       <Header />
       {isOpen && <Nav />}
       {searchOpen && <SearchOverlay />}
+      {cartOpen && <Cart />}
       <main>{children}</main>
       {router.asPath !== "/about" && <Footer />}
     </div>

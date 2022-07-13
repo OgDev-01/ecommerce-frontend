@@ -38,7 +38,7 @@ export const Nav = () => {
                   router.asPath === link.slug ? "active" : ""
                 }`}
               >
-                <Links path={link.slug} children={link.name} />
+                <Links path={link.slug}>{link.name} </Links>
               </li>
             ))}
           </ul>

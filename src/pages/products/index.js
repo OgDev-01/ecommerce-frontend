@@ -1,5 +1,5 @@
 import React from "react";
 
-const Index = () => {
+export default function Products() {
   return <div>products</div>;
-};
+}

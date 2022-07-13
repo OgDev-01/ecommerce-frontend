@@ -3,7 +3,6 @@ import ComponentContact from "@/components/organisms/Pages/ComponentContactPage"
 import { createClient } from "../../prismicio";
 export default function Contact({ documents }) {
   const { data } = documents;
-  console.log(data);
   return (
     <Layout title={data.title}>
       <ComponentContact {...data} />;

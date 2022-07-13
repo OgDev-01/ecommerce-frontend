@@ -28,13 +28,24 @@ main {
   background-color: $color-white;
   padding-top: 50px;
 }
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: rem(18px);
+  margin: 0;
 }
-
+h1,
+h2 {
+  text-transform: uppercase;
+  font-size: rem(18px);
+  letter-spacing: 4px;
+}
+p {
+  margin: 0;
+}
 // utility classes
 .flex {
   display: flex;
@@ -48,6 +59,12 @@ h1 {
 }
 .justify-evenly {
   justify-content: space-evenly;
+}
+.align-center {
+  align-items: center;
+}
+.no-wrap {
+  flex-wrap: nowrap;
 }
 .grey {
   background-color: #e7ecf0;

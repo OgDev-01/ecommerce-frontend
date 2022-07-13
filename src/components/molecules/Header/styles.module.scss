@@ -1,3 +1,4 @@
+@import "@/base/styles/helpers";
 .wrapper {
   padding-block: 10px;
   position: fixed;
@@ -17,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .logo{
+  .logo {
     transform: translateX(12px);
   }
 
@@ -30,4 +31,10 @@
       height: 24px;
     }
   }
+}
+.cartNum {
+  position: absolute;
+  left: 17px;
+  top: -12px;
+  font-size: rem(10px);
 }
