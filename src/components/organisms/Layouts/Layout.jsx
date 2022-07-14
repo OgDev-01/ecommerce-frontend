@@ -33,6 +33,8 @@ const Layout = ({ children, ...customMeta }) => {
     }
   }, [isOpen, cartOpen]);
 
+
+  // mobile online restriction function
   const deviceType = () => {
     const userAgent = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
@@ -57,6 +59,7 @@ const Layout = ({ children, ...customMeta }) => {
   if (!mounted) {
     return <NotMobile />;
   }
+
 
   return (
     <div className='main-wrapper'>
