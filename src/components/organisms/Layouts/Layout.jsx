@@ -14,7 +14,7 @@ import { useRecoilValue } from "recoil";
 import Cart from "@/components/molecules/Cart";
 import NotMobile from "../Pages/ComponentNotMobile";
 const Layout = ({ children, ...customMeta }) => {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
   const isOpen = useRecoilValue(navState);
   const searchOpen = useRecoilValue(searchToggle);
   const cartOpen = useRecoilValue(cartState);
@@ -33,8 +33,6 @@ const Layout = ({ children, ...customMeta }) => {
     }
   }, [isOpen, cartOpen]);
 
-
-
   const deviceType = () => {
     const userAgent = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
@@ -50,11 +48,11 @@ const Layout = ({ children, ...customMeta }) => {
   };
 
   useEffect(() => {
-    const agent = deviceType();
-    agent !== "mobile" && router.push("/", "/?mobile=false")
-      ? setMounted(false)
-      : router.push("/") && setMounted(true);
-  }, []);
+    if (typeof window !== undefined) {
+      const agent = deviceType();
+      agent !== "mobile" ? setMounted(false) : setMounted(true);
+    }
+  }, [mounted]);
 
   if (!mounted) {
     return <NotMobile />;
@@ -104,7 +102,7 @@ const Layout = ({ children, ...customMeta }) => {
           rel='preload'
           as='image'
           href='/images/icons/minus-dark.svg'
-        ></link> 
+        ></link>
         <link
           rel='preload'
           as='image'
