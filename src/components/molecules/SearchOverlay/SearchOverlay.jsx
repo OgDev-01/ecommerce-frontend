@@ -1,11 +1,11 @@
-import Filters from "@/components/atoms/Filters";
-import { useRef, useState } from "react";
-import * as styles from "./styles.module.scss";
+import Filters from '@/components/atoms/Filters';
+import { useRef, useState } from 'react';
+import * as styles from './styles.module.scss';
 import {
   searchToggle,
   recentSearchState,
-} from "@/base/context/Atoms/atomstate";
-import { useRecoilState, useSetRecoilState } from "recoil";
+} from '@/base/context/Atoms/atomstate';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 export const SearchOverlay = () => {
   const setToggleSearch = useSetRecoilState(searchToggle);
   const inputRef = useRef(null);
@@ -22,12 +22,12 @@ export const SearchOverlay = () => {
   };
 
   const searchTerms = [
-    "Trending",
-    "Dress",
-    "Bag",
-    "Tshirt",
-    "Beauty",
-    "Accessories",
+    'Trending',
+    'Dress',
+    'Bag',
+    'Tshirt',
+    'Beauty',
+    'Accessories',
   ];
 
   return (
@@ -46,6 +46,7 @@ export const SearchOverlay = () => {
             type='search'
             placeholder='search items'
             autoFocus
+            onFocus={(e) => e.target.select()}
             ref={inputRef}
           />
           <span
@@ -61,7 +62,7 @@ export const SearchOverlay = () => {
             <div className={styles.keywordsWrap}>
               {recentSearch &&
                 recentSearch.flatMap((keyword, index) =>
-                  keyword === "" || keyword === " " ? (
+                  keyword === '' || keyword === ' ' ? (
                     []
                   ) : (
                     <Filters

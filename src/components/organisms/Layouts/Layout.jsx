@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
-import Header from "@/components/molecules/Header";
-import { useRouter } from "next/router";
-import Nav from "@/components/molecules/Nav";
-import Footer from "../../molecules/Footer";
-import SearchOverlay from "@/components/molecules/SearchOverlay";
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Header from '@/components/molecules/Header';
+import { useRouter } from 'next/router';
+import Nav from '@/components/molecules/Nav';
+import Footer from '../../molecules/Footer';
+import SearchOverlay from '@/components/molecules/SearchOverlay';
 import {
   navState,
   searchToggle,
   cartState,
-} from "@/base/context/Atoms/atomstate";
-import { useRecoilValue } from "recoil";
-import Cart from "@/components/molecules/Cart";
-import NotMobile from "../Pages/ComponentNotMobile";
+} from '@/base/context/Atoms/atomstate';
+import { useRecoilValue } from 'recoil';
+import Cart from '@/components/molecules/Cart';
+import NotMobile from '../Pages/ComponentNotMobile';
 const Layout = ({ children, ...customMeta }) => {
   const [mounted, setMounted] = useState(true);
   const isOpen = useRecoilValue(navState);
@@ -20,37 +20,38 @@ const Layout = ({ children, ...customMeta }) => {
   const cartOpen = useRecoilValue(cartState);
   const router = useRouter();
   const meta = {
-    type: "website",
+    type: 'website',
     description:
-      "Open Fashion - Free Ecommerce UI Kit is a free download UI kit. You can open Open Fashion - Free Ecommerce UI Kit file by Figma.",
+      'Open Fashion - Free Ecommerce UI Kit is a free download UI kit. You can open Open Fashion - Free Ecommerce UI Kit file by Figma.',
     ...customMeta,
   };
   useEffect(() => {
     if (isOpen || cartOpen) {
-      document.documentElement.classList.add("block-scroll");
+      document.documentElement.classList.add('block-scroll');
     } else {
-      document.documentElement.classList.remove("block-scroll");
+      document.documentElement.classList.remove('block-scroll');
     }
   }, [isOpen, cartOpen]);
 
+  // mobile online restriction function
   const deviceType = () => {
     const userAgent = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
-      return "tablet";
+      return 'tablet';
     } else if (
       /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
         userAgent
       )
     ) {
-      return "mobile";
+      return 'mobile';
     }
-    return "desktop";
+    return 'desktop';
   };
 
   useEffect(() => {
     if (typeof window !== undefined) {
       const agent = deviceType();
-      agent !== "mobile" ? setMounted(false) : setMounted(true);
+      agent !== 'mobile' ? setMounted(false) : setMounted(true);
     }
   }, [mounted]);
 
@@ -86,6 +87,7 @@ const Layout = ({ children, ...customMeta }) => {
           rel='preload'
           as='font'
           href='/fonts/BodoniModa_28pt-BoldItalic.ttf'
+          crossOrigin='anonymous'
         ></link>
         <link rel='preload' as='image' href='/images/icons/Close.svg'></link>
         <link rel='preload' as='image' href='/images/icons/Location.svg'></link>
@@ -114,7 +116,7 @@ const Layout = ({ children, ...customMeta }) => {
       {searchOpen && <SearchOverlay />}
       {cartOpen && <Cart />}
       <main>{children}</main>
-      {router.asPath !== "/about" && <Footer />}
+      {router.asPath !== '/about' && <Footer />}
     </div>
   );
 };
