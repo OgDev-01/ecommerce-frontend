@@ -23,16 +23,16 @@ export const Header = () => {
       <div className='container'>
         <div className={styles.headContents}>
           <div onClick={() => setIsOpen((prev) => !prev)}>
-            <img src='images/icons/Menu.svg' alt='hamburger' />
+            <img src='/images/icons/Menu.svg' alt='hamburger' />
           </div>
           <div className={styles.logo}>
             <Links path='/'>
-              <img src='images/vectors/Logo.svg' alt='brand logo' />
+              <img src='/images/vectors/Logo.svg' alt='brand logo' />
             </Links>
           </div>
           <div className={styles.iconsWrap}>
             <span onClick={() => setToggleSearch((prev) => !prev)}>
-              <img src='images/icons/Search.svg' alt='search icon' />
+              <img src='/images/icons/Search.svg' alt='search icon' />
             </span>
 
             <span
@@ -44,7 +44,7 @@ export const Header = () => {
                   <CartCount>{cartCount}</CartCount>
                 </span>
               )}
-              <img src='images/icons/shopping-bag.svg' alt='shopping bag' />
+              <img src='/images/icons/shopping-bag.svg' alt='shopping bag' />
             </span>
           </div>
         </div>

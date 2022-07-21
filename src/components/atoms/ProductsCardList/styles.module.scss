@@ -1,0 +1,71 @@
+@import '@/base/styles/helpers';
+@import '@/base/styles/variables';
+.card {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  margin-top: 20px;
+  a {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    color: $color-dark-50;
+    text-decoration: none;
+  }
+}
+.cardBody {
+  width: 60%;
+  // background-color: red;
+  position: relative;
+  padding-block: 5px;
+  h2 {
+    font-size: rem(15px);
+    letter-spacing: 2px;
+  }
+}
+.desc {
+  font-size: rem(15px);
+  line-height: 24px;
+}
+.price {
+  color: $color-secondary;
+  line-height: 24px;
+}
+.ratingWrap {
+  p {
+    margin-left: 4px;
+    font-size: rem(13px);
+  }
+}
+.cardImg {
+  width: 113px;
+  height: 150.67px;
+  position: relative;
+}
+.favorite {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
+  width: 18px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.size {
+  column-gap: 8px;
+  margin-left: 5px;
+  margin-top: 5px;
+  span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #dedede;
+    font-size: rem(8px);
+    text-transform: uppercase;
+    color: $color-dark-50;
+  }
+}

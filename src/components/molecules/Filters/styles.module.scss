@@ -1,0 +1,50 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.wrapper {
+  padding: 15px 10px 15px 0;
+}
+.actionsWrap {
+  column-gap: 4px;
+}
+.action {
+  padding: 15px 15px;
+  background-color: $color-action;
+  border-radius: 33px;
+  span {
+    color: $color-dark-50;
+    font-size: rem(16px);
+    margin-top: 4px;
+  }
+}
+.filterAction {
+  position: relative;
+  z-index: 5;
+  img {
+    width: 16.04px;
+    height: 16.04px;
+    transform: translateY(3px);
+  }
+}
+.dropdown {
+  position: absolute;
+  top: 52px;
+  border-radius: 10px;
+  background-color: $color-action;
+  padding: 10px 15px;
+  max-height: 110px;
+  overflow: scroll;
+   overflow: -moz-scrollbars-none; /*For older versions of Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  p {
+    padding-block: 5px;
+    margin-block: 1.5px;
+  }
+}
+.count {
+  text-transform: uppercase;
+}

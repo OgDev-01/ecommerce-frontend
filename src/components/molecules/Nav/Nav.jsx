@@ -14,7 +14,7 @@ export const Nav = () => {
 
   const nav_links = [
     { name: "Home", slug: "/" },
-    { name: "Product", slug: "/product" },
+    { name: "Product", slug: "/products" },
     { name: "Blog", slug: "/blog" },
     { name: "About", slug: "/about" },
     { name: "Contact", slug: "/contact" },

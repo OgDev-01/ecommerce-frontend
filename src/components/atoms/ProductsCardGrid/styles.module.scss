@@ -1,0 +1,36 @@
+@import "@/base/styles/helpers";
+@import "@/base/styles/variables";
+.card {
+  max-width: 165px;
+  width: 165px;
+}
+.cardImg {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  span {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+  }
+}
+.cardContent {
+  a {
+    text-decoration: none;
+    padding-top: 10px;
+    display: block;
+  }
+  h3 {
+    color: $color-dark;
+  }
+  p {
+    color: $color-dark-50;
+    line-height: 18px;
+    font-size: rem(14px);
+  }
+  div {
+    color: $color-secondary;
+    margin-top: 5px;
+    font-size: rem(18px);
+  }
+}
