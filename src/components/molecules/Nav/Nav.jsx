@@ -47,13 +47,13 @@ export const Nav = () => {
           <a href='tel:+2348063348944'>
             {" "}
             <span>
-              <img src='/images/icons/Call.svg' alt='' />
+              <img src='/images/icons/Call.svg' alt='call icon' />
             </span>
             <span>(+234) 806-334-8944 </span>
           </a>
           <a href='#'>
             <span>
-              <img src='/images/icons/Location.svg' alt='' />
+              <img src='/images/icons/Location.svg' alt='location icon' />
             </span>
             <span>Store locator</span>
           </a>

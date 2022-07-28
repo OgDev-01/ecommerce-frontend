@@ -1,13 +1,13 @@
-import Button from "@/components/atoms/button";
-import HorizontalLine from "@/components/atoms/horizontalLine";
-import * as styles from "./styles.module.scss";
+import Button from '@/components/atoms/button';
+import HorizontalLine from '@/components/atoms/horizontalLine';
+import * as styles from './styles.module.scss';
 export const SignupForm = () => {
   const buttonProps = {
-    type: "submit",
-    text: "submit",
+    type: 'submit',
+    text: 'submit',
     icon: {
-      position: "right",
-      url: "/images/icons/arrow-right.svg",
+      position: 'right',
+      url: '/images/icons/arrow-right.svg',
     },
   };
   return (

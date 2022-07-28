@@ -13,7 +13,7 @@ export const TextUs = ({ items }) => {
         <RichText field={description} />
       </div>
 
-      <Button urlPath='#' ariants='default' text={buttonText} />
+      <Button urlPath='#' type="link" variants='default' text={buttonText} />
     </section>
   );
 };

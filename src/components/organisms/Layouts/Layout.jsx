@@ -62,7 +62,7 @@ const Layout = ({ children, ...customMeta }) => {
   return (
     <div className='main-wrapper'>
       <Head>
-        <title>{meta.title}</title>
+        <title>{meta.title} | Open Fashion</title>
         <meta content={meta.description} name='description' />
         <meta property='og:type' content={meta.type} />
         <meta
