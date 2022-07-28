@@ -19,11 +19,8 @@ export const Button = (props) => {
         <ButtonTypeFullWidth {...props} />
       );
     case 'submit':
-      return props.variants === 'default' ? (
-        <ButtonTypeSubmit {...props} />
-      ) : (
-        <ButtonTypeFullWidth {...props} />
-      );
+      return <ButtonTypeSubmit {...props} />;
+
     case 'add-to-cart':
       return <ButtonTypeAddToCart {...props} />;
     default:
@@ -59,7 +56,7 @@ const ButtonTypeDefault = ({ type, urlPath, icon = {}, text }) => {
 
 const ButtonTypeFullWidth = ({ action, urlPath, icon = {}, text }) => {
   return (
-    <ButtonFullWidth onClick={()=> action()}>
+    <ButtonFullWidth onClick={() => action()}>
       <Links path={urlPath}>
         {icon ? (
           <span>
@@ -82,7 +79,7 @@ const ButtonTypeFullWidth = ({ action, urlPath, icon = {}, text }) => {
 };
 const ButtonTypeSubmit = ({ type, urlPath, icon = {}, text, action }) => {
   return (
-    <ButtonSubmit type='submit'>
+    <ButtonSubmit type={type}>
       {icon ? (
         <span>
           {icon.position === 'left' && (
