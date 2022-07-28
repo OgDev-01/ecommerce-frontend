@@ -1,7 +1,8 @@
 // import useLocalStorage from '@/base/hooks/useLocalStorage';
 import { favoriteState, productsState } from '@/base/context/Atoms/atomstate';
 import Image from 'next/image';
-import { useRecoilValue, useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
+import { handleFavoriteUpdate } from '@/base/functions/functions';
 import Links from '../Link';
 import * as styles from './styles.module.scss';
 
@@ -13,10 +14,8 @@ export const CardList = ({
   rating,
   sizes,
   slug,
-  handleFav,
 }) => {
   const favorite = useRecoilValue(favoriteState);
-  const products = useRecoilValue(productsState);
   return (
     <div className={styles.card}>
       <Links path={`/products/${slug}`}>
@@ -53,7 +52,7 @@ export const CardList = ({
         )}
         <div
           className={styles.favorite}
-          onClick={() => handleFav(products, slug)}
+          onClick={() => handleFavoriteUpdate(slug)}
         >
           {favorite.find((item) => item.slug === slug) ? (
             <img src='/images/icons/Heart-full.svg' />

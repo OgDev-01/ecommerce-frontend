@@ -1,11 +1,11 @@
-@import "@/base/styles/helpers";
-@import "@/base/styles/resets";
-@import "@/base/styles/variables";
-@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
+@import '@/base/styles/helpers';
+@import '@/base/styles/resets';
+@import '@/base/styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 
 @font-face {
-  font-family: "Bodoni moda 28pt";
-  src: url("/fonts/BodoniModa_28pt-BoldItalic.ttf") format("truetype");
+  font-family: 'Bodoni moda 28pt';
+  src: url('/fonts/BodoniModa_28pt-BoldItalic.ttf') format('truetype');
   font-weight: 700;
 }
 
@@ -13,7 +13,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Tenor Sans", sans-serif;
+  font-family: 'Tenor Sans', sans-serif;
   font-weight: 400;
 }
 .active {
@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  margin: 0;
+  // margin: 0;
 }
 h1,
 h2 {
@@ -43,9 +43,7 @@ h2 {
   font-size: rem(18px);
   letter-spacing: 4px;
 }
-p {
-  margin: 0;
-}
+
 // utility classes
 .flex {
   display: flex;
@@ -75,6 +73,22 @@ p {
 .block-scroll {
   height: 100%;
   overflow: hidden;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    color: $color-dark-30;
+    font-size: rem(25px) !important;
+  }
+}
+
+.swiper-pagination {
+  bottom: 10px;
+}
+.swiper-pagination-bullet {
+  background-color: $color-dark-30 !important;
+  border-radius: 0 !important;
+  transform: rotate(45deg);
 }
 .container {
   max-width: 100%;

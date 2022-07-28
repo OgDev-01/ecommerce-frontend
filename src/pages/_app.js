@@ -1,14 +1,15 @@
-import { PrismicProvider } from "@prismicio/react";
-import { PrismicPreview } from "@prismicio/next";
-import { linkResolver, repositoryName } from "../../prismicio";
-import Links from "@/components/atoms/Link";
-import { RecoilRoot } from "recoil";
-import "../styles/globals.scss";
-
+import { PrismicProvider } from '@prismicio/react';
+import { PrismicPreview } from '@prismicio/next';
+import { linkResolver, repositoryName } from '../../prismicio';
+import Links from '@/components/atoms/Link';
+import { RecoilRoot } from 'recoil';
+import RecoilNexus from 'recoil-nexus';
+import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
     <RecoilRoot>
+      <RecoilNexus />
       <PrismicProvider
         linkResolver={linkResolver}
         internalLinkComponent={({ href, children, ...props }) => (

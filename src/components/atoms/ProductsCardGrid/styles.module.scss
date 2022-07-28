@@ -1,5 +1,5 @@
-@import "@/base/styles/helpers";
-@import "@/base/styles/variables";
+@import '@/base/styles/helpers';
+@import '@/base/styles/variables';
 .card {
   max-width: 165px;
   width: 165px;
@@ -22,11 +22,13 @@
   }
   h3 {
     color: $color-dark;
+    margin: 0;
   }
   p {
     color: $color-dark-50;
     line-height: 18px;
     font-size: rem(14px);
+    margin: 0;
   }
   div {
     color: $color-secondary;
