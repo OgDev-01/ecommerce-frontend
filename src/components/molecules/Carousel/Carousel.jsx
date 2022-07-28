@@ -16,11 +16,11 @@ export const Carousel = ({ coverImg, productImg }) => {
         autoplay={{ delay: 5000, disableOnInteraction: false }}
       >
         <SwiperSlide>
-          <img src={coverImg.url} alt='' />
+          <img src={coverImg.url} alt='product hero' />
         </SwiperSlide>
         {productImg.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image.url} alt='' />
+            <img src={image.url} alt='product hero' />
           </SwiperSlide>
         ))}
       </Swiper>

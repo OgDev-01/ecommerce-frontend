@@ -29,7 +29,7 @@ export default function Products({ products, productCategories }) {
 
   if (error) return console.error(error);
   return (
-    <Layout>
+    <Layout title='Products'>
       <ProductsPage />
     </Layout>
   );

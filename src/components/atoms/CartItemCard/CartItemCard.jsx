@@ -22,7 +22,7 @@ export const CartItemCard = ({
   return (
     <div className={`${styles.card} flex`}>
       <div className={styles.close} onClick={() => handleRemoveFromCart(slug)}>
-        <img src='/images/icons/Close.svg' alt='' />
+        <img src='/images/icons/Close.svg' alt='close icon' />
       </div>
       <div
         className={styles.cardImg}
@@ -41,11 +41,11 @@ export const CartItemCard = ({
             className={`${styles.minus} flex justify-center align-center`}
             onClick={() => decrementQuantity(slug)}
           >
-            <img src='/images/icons/minus-dark.svg' alt='' />
+            <img src='/images/icons/minus-dark.svg' alt='minus icon' />
           </div>
           {quantity}
           <div className={styles.plus} onClick={() => incrementQuantity(slug)}>
-            <img src='/images/icons/Plus-dark.svg' alt='' />
+            <img src='/images/icons/Plus-dark.svg' alt='plus icon' />
           </div>
         </div>
         <p className={styles.price}>${price * quantity}</p>

@@ -3,8 +3,9 @@ import { client } from '@/base/libs/apolloClient';
 import { GET_PATHS, GET_SINGLE_PRODUCT_BY_SLUG } from '@/base/libs/gqlQueries';
 import ProductDetailsPage from '@/components/organisms/Pages/ComponentProductDetailsPage';
 export default function ProductDetails({ product }) {
+  const { title, description } = product;
   return (
-    <Layout>
+    <Layout title={title} description={description}>
       <ProductDetailsPage {...product} />
     </Layout>
   );

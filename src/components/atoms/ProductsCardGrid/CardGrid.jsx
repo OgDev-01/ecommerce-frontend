@@ -15,7 +15,7 @@ export const CardGrid = ({ coverImage, title, description, price, slug }) => {
           {favorite.find((item) => item.slug === slug) ? (
             <img src='/images/icons/Heart-full.svg' />
           ) : (
-            <img src={'/images/icons/Heart-brown.svg'} alt='' />
+            <img src={'/images/icons/Heart-brown.svg'} alt='heart icon' />
           )}
         </span>
       </div>
