@@ -114,7 +114,7 @@ const Layout = ({ children, ...customMeta }) => {
       <Header />
       {isOpen && <Nav />}
       {searchOpen && <SearchOverlay />}
-      {cartOpen && <Cart />}
+      {cartOpen ? <Cart /> : null}
       <main>{children}</main>
       {router.asPath !== '/about' && <Footer />}
     </div>

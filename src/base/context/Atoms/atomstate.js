@@ -39,6 +39,7 @@ export const recentSearchState = atom({
 export const productsState = atom({
   key: 'products',
   default: [],
+  effects: [localStorageEffect('products')],
 });
 export const blogsState = atom({
   key: 'blogs',
@@ -58,7 +59,8 @@ export const blogCategoriesState = atom({
 });
 export const cartItemsState = atom({
   key: 'cartItems',
-  default: [{ food: 'food' }],
+  default: [],
+  effects: [localStorageEffect('cart_items')],
 });
 export const filterValueState = atom({
   key: 'filterValue',

@@ -1,0 +1,84 @@
+@import '@/base/styles/helpers';
+@import '@/base/styles/variables';
+
+.desc {
+  font-size: rem(18px);
+  margin-top: 6px;
+}
+.price {
+  margin-top: 6px;
+  color: $color-secondary;
+  font-size: rem(18px);
+}
+.callToAction {
+  padding-top: 20px;
+
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: none;
+  }
+}
+.actions {
+  padding-top: 15px;
+  column-gap: 40px;
+}
+.colorSelectWrap {
+  column-gap: 15px;
+}
+.colorAction {
+  column-gap: 15px;
+  width: max-content;
+  span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .active {
+    &::before {
+      content: '';
+      border: 1px solid $color-dark-30;
+      display: block;
+      position: absolute;
+      width: 138%;
+      height: 138%;
+      border-radius: 50%;
+      left: -3px;
+      top: -3px;
+    }
+  }
+}
+
+.sizeSelectWrap {
+  column-gap: 15px;
+}
+.sizeAction {
+  column-gap: 10px;
+
+  span {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #dedede;
+    text-align: center;
+    border-radius: 50%;
+    font-size: rem(9px);
+    text-transform: uppercase;
+  }
+  .active {
+    background-color: $color-dark;
+    color: $color-off-white;
+  }
+}
+.markdown {
+  p {
+    line-height: 25px;
+    margin-bottom: 28px;
+  }
+}
+.relatedWrap {
+  padding-top: 30px;
+  column-gap: 15px;
+  row-gap: 25px;
+}

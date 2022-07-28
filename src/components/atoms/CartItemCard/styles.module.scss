@@ -1,8 +1,9 @@
-@import "@/base/styles/helpers";
-@import "@/base/styles/variables";
+@import '@/base/styles/helpers';
+@import '@/base/styles/variables';
 .card {
   column-gap: 10px;
   flex-wrap: nowrap;
+  position: relative;
 }
 .cardDetails {
   padding-top: 12px;
@@ -44,4 +45,13 @@
   color: $color-primary;
   margin-top: 13px;
   font-size: rem(17px);
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
 }

@@ -1,21 +1,22 @@
 import Layout from '@/components/organisms/Layouts/Layout';
-import { fetcher } from '@/base/functions/functions';
-export default function ProductDetails({ productsDetails }) {
-  console.log(productsDetails);
+import { client } from '@/base/libs/apolloClient';
+import { GET_PATHS, GET_SINGLE_PRODUCT_BY_SLUG } from '@/base/libs/gqlQueries';
+import ProductDetailsPage from '@/components/organisms/Pages/ComponentProductDetailsPage';
+export default function ProductDetails({ product }) {
   return (
     <Layout>
-      <div>welcome to product details page</div>;
+      <ProductDetailsPage {...product} />
     </Layout>
   );
 }
 
 export async function getStaticPaths() {
-  const response = await fetcher(
-    `${process.env.STRAPI_ENDPOINT_PRODUCTION}/products?fields=slug`
-  );
-  const { data } = response;
-  const paths = data.map((path) => ({
-    params: { slug: path.attributes.slug },
+  const { data } = await client.query({
+    query: GET_PATHS,
+  });
+  const { products } = data;
+  const paths = products.map((path) => ({
+    params: { slug: path.slug },
   }));
 
   return {
@@ -24,12 +25,13 @@ export async function getStaticPaths() {
   };
 }
 export async function getStaticProps({ params }) {
-  const response = await fetcher(
-    `${process.env.STRAPI_ENDPOINT_PRODUCTION}/products/${params.slug}?populate=*`
-  );
-  const { data: productsDetails } = response;
-
+  const { slug } = params;
+  const { data } = await client.query({
+    query: GET_SINGLE_PRODUCT_BY_SLUG,
+    variables: { slug },
+  });
+  const { product } = data;
   return {
-    props: { productsDetails },
+    props: { product },
   };
 }
